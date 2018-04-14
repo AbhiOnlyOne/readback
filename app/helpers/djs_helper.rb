@@ -56,7 +56,7 @@ module DjsHelper
                 src: dj_profile_url(dj)
   end
 
-  def dj_profile_url(dj, variant: { thumbnail: '128x128^' })
+  def dj_profile_url(dj, variant: { thumbnail: '288x288^' })
     return polymorphic_url dj.avatar.variant variant if dj.avatar.attached?
 
     dj.robot_picture_url
